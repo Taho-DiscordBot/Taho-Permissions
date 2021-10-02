@@ -9,4 +9,4 @@ In the `config.toml` file, you must enter :
 - The name of the file that will be created with your slash commands
 - The version of the discord api at the time you are using the program
 
-( - A guild id if you want to get the commands of a particular guild )
+- (A guild id if you want to get the commands of a particular guild)
