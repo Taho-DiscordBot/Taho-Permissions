@@ -1,0 +1,10 @@
+[bot]
+id = 0 #Bot Id
+token = "" #Connection token of your bot
+
+[other]
+name = "" #Name of the file that will be created with your commands
+api_version = "v9" #Version of the current discord api
+
+[optional]
+guild = 0 #Set to 0 if you don't want to specify a guild
