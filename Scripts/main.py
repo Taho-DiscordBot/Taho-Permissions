@@ -101,8 +101,8 @@ with open(f"./{config['other']['name']}.toml", 'w', encoding = 'utf-8') as file:
         application_id = command['application_id']
         file.write(f'application_id = {application_id}\n')
 
-        guild_id = command['guild_id']
-        if guild_id != 0:
+        if 'guild_id' in command:
+            guild_id = command['guild_id']
             file.write(f'guild_id = {guild_id}\n')
 
         file.write(f'name = "{name}"\n')
