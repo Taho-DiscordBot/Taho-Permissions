@@ -20,6 +20,8 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/Taho-DiscordBot/Taho-Permissions/issues",
     },
+    package_dir={"permissions":"permissions"},
+    packages=["permissions"],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
