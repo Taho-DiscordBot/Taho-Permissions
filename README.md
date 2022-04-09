@@ -11,6 +11,11 @@ $ git clone git@https://github.com/Taho-DiscordBot/Taho-Permissions.git
 $ cd Taho-Permissions
 $ python3 setup.py install
 ```
+To install the package, do the following:
+
+```
+$ pip install -U git+https://github.com/Taho-DiscordBot/Taho-Permissions.git
+```
 
 #### Contributing
 
