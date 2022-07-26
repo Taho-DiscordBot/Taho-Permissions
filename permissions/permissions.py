@@ -192,9 +192,9 @@ class Permissions(BaseFlags):
         "Roleplay participation" permissions set to ``True``. The guild-specific
         permissions are currently:
 
-        - :attr:`npc_create`
-        - :attr:`shop_create`
-        - :attr:`account_create`
+        - :attr:`manage_npc`
+        - :attr:`manage_shop`
+        - :attr:`manage_account`
         """
         return cls(0b00000000000000001110000000000000)
 
@@ -204,13 +204,13 @@ class Permissions(BaseFlags):
         "Roleplay configuration" permissions set to ``True``. The guild-specific
         permissions are currently:
 
-        - :attr:`job_create`
-        - :attr:`item_create`
-        - :attr:`class_create`
-        - :attr:`stat_create`
-        - :attr:`bank_create`
-        - :attr:`admin_shop_create`
-        - :attr:`craft_create`
+        - :attr:`manage_job`
+        - :attr:`manage_item`
+        - :attr:`manage_class`
+        - :attr:`manage_stat`
+        - :attr:`manage_bank`
+        - :attr:`manage_admin_shop`
+        - :attr:`manage_craft`
         """
         return cls(0b11000000001111100000000000000000000000)
 
@@ -264,7 +264,7 @@ class Permissions(BaseFlags):
 
     @flag_value
     def open_inventory(self) -> int:
-        """:class:`bool`: Returns ``True`` if the player can create open his inventory."""
+        """:class:`bool`: Returns ``True`` if the player can open his inventory."""
         return 1 << 0
 
     @flag_value
@@ -328,19 +328,19 @@ class Permissions(BaseFlags):
         return 1 << 12
 
     @flag_value
-    def npc_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create a NPC.
+    def manage_npc(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage a NPC.
 
         """
         return 1 << 13
 
     @flag_value
-    def shop_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create a shop. It is for player's shops, not for admin shops."""
+    def manage_shop(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage a shop. It is for player's shops, not for admin shops."""
         return 1 << 14
 
     @flag_value
-    def account_create(self) -> int:
+    def manage_account(self) -> int:
         """:class:`bool`: Returns ``True`` if a player can open an account in a bank."""
         return 1 << 15
 
@@ -380,38 +380,38 @@ class Permissions(BaseFlags):
         return 1 << 22
 
     @flag_value
-    def job_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create jobs."""
+    def manage_job(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage jobs."""
         return 1 << 23
 
     @flag_value
-    def item_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create items."""
+    def manage_item(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage items."""
         return 1 << 24
 
     @flag_value
-    def class_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create classes."""
+    def manage_class(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage classes."""
         return 1 << 25
 
     @flag_value
-    def stat_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create stats."""
+    def manage_stat(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage stats."""
         return 1 << 26
 
     @flag_value
-    def bank_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create banks."""
+    def manage_bank(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage banks."""
         return 1 << 27
 
     @flag_value
-    def admin_shop_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create admin shops (different of player shops, in admin shop you can have unlimited quantities)."""
+    def manage_admin_shop(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage admin shops (different of player shops, in admin shop you can have unlimited quantities)."""
         return 1 << 36
     
     @flag_value
-    def craft_create(self) -> int:
-        """:class:`bool`: Returns ``True`` if a player can create crafts."""
+    def manage_craft(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage crafts."""
         return 1 << 37
 
     @flag_value
