@@ -9,7 +9,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="Taho-Permissions",
-    version="0.0.1",
+    version="0.0.2",
     license="MIT",
     author="Baptiste",
     author_email="taho.discordbot@gmail.com",
