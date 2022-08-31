@@ -145,7 +145,7 @@ class Permissions(BaseFlags):
         """A factory method that creates a :class:`Permissions` with all
         permissions set to ``True``.
         """
-        return cls(0b11111111111111111111111111111111111111)
+        return cls(0b111111111111111111111111111111111111111)
 
 
     @classmethod
@@ -211,8 +211,9 @@ class Permissions(BaseFlags):
         - :attr:`manage_bank`
         - :attr:`manage_admin_shop`
         - :attr:`manage_craft`
+        - :attr:`manage_currency`
         """
-        return cls(0b11000000001111100000000000000000000000)
+        return cls(0b111000000001111100000000000000000000000)
 
     @classmethod
     def advanced_roleplay_configuration(cls: Type[P]) -> P:
@@ -413,6 +414,11 @@ class Permissions(BaseFlags):
     def manage_craft(self) -> int:
         """:class:`bool`: Returns ``True`` if a player can manage crafts."""
         return 1 << 37
+    
+    @flag_value
+    def manage_currency(self) -> int:
+        """:class:`bool`: Returns ``True`` if a player can manage currencies."""
+        return 1 << 38
 
     @flag_value
     def sheet_configure(self) -> int:
